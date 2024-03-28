@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  web-sam-tool:
+    container_name: web-sam-tool
+    networks:
+      default:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./project:/work
+    tty: true
+    restart: always
